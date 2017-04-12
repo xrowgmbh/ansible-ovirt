@@ -1,5 +1,13 @@
 ---
 
+# ansible-playbook -i demo/self_hosted self_hosted.yml -e "@demo/self_hosted.json" --private-key=~/.ssh/id_rsa_xrow
+
+- hosts: self_hosted_first_host
+  become: true
+  tasks:
+  - name: Add hostname if it doesn`t exist
+    lineinfile: dest=/etc/hosts state=present line='192.168.0.230 vm01.xrow.lan'
+
 - hosts: self_hosted_first_host
   remote_user: root
   gather_facts: no

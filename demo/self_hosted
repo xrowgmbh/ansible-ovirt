@@ -1,12 +1,12 @@
 [self_hosted_first_host]
-x1.example.org host_id=1 mac_address=52:11:22:33:44:41
+192.168.0.230 ansible_ssh_user=root ansible_ssh_pass=centos host_id=1 mac_address=0c:c4:7a:7c:31:31
 
 [self_hosted_engine]
-ovirt-engine.example.org
+ovirt-engine.xrow.lan
 
 [self_hosted_engine:vars]
 register_to_satellite=false
 
-[self_hosted_additional_hosts]
-x2.example.org host_id=2 mac_address=52:11:22:33:44:42
-x3.example.org host_id=3 mac_address=52:11:22:33:44:43
+#[self_hosted_additional_hosts]
+#x2.example.org host_id=2 mac_address=52:11:22:33:44:42
+#x3.example.org host_id=3 mac_address=52:11:22:33:44:43
